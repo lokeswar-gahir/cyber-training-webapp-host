@@ -1,0 +1,567 @@
+/* ============================================================
+   SecureStart · Cybersecurity Awareness Training
+   Friendly corporate design — light, green/teal, navy text
+   ============================================================ */
+
+:root {
+    --primary: #0f766e;
+    --primary-light: #14b8a6;
+    --success: #16a34a;
+    --background: #f4f8f7;
+    --card: #ffffff;
+    --text: #172033;
+    --muted: #64748b;
+    --border: #dbe5e3;
+    --danger: #b91c1c;
+    --radius: 16px;
+    --shadow: 0 6px 24px rgba(15, 118, 110, 0.10);
+    --shadow-soft: 0 2px 10px rgba(15, 118, 110, 0.06);
+    --focus-ring: 0 0 0 3px rgba(20, 184, 166, 0.45);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+    background-color: var(--card);
+    border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 8px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--text);
+    border-radius: 10px;
+}
+
+.brand-icon {
+    font-size: 1.5rem;
+}
+
+.brand-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    color: var(--primary);
+}
+
+.header-tagline {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+/* ---------- App / main area ---------- */
+
+.app {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 15px 20px 15px;
+    flex: 1;
+}
+
+/* ---------- Buttons ---------- */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 22px;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    line-height: 1.2;
+    min-height: 48px;
+    transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.05s ease, box-shadow 0.15s ease;
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+.btn:focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring);
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #0c635c;
+}
+
+.btn-secondary {
+    background-color: var(--card);
+    color: var(--primary);
+    border-color: var(--primary-light);
+}
+
+.btn-secondary:hover {
+    background-color: #eefaf8;
+}
+
+.btn-ghost {
+    background-color: transparent;
+    color: var(--primary);
+    border-color: transparent;
+}
+
+.btn-ghost:hover {
+    background-color: rgba(15, 118, 110, 0.08);
+}
+
+.btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+/* ---------- Landing / home ---------- */
+
+.home-hero {
+    text-align: center;
+    padding: 12px 0 26px;
+}
+
+.home-hero-icon {
+    font-size: 3.4rem;
+    line-height: 1;
+}
+
+.home-title {
+    margin: 14px 0 8px;
+    font-size: 2rem;
+    color: var(--text);
+}
+
+.home-subtitle {
+    max-width: 620px;
+    margin: 0 auto;
+    color: var(--muted);
+    font-size: 1.05rem;
+}
+
+.home-heading {
+    font-size: 1.15rem;
+    margin: 26px 0 14px;
+    color: var(--text);
+    text-align: center;
+}
+
+.modules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+    gap: 16px;
+}
+
+.module-card {
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    flex-direction: column;
+}
+
+.module-icon {
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.module-title {
+    margin: 12px 0 6px;
+    font-size: 1.2rem;
+}
+
+.module-desc {
+    margin: 0 0 18px;
+    color: var(--muted);
+    flex: 1;
+}
+
+/* ---------- Module introduction ---------- */
+
+.intro-card,
+.completion-card,
+.error-card {
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    box-shadow: var(--shadow);
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.intro-icon,
+.completion-icon,
+.error-icon {
+    font-size: 2.8rem;
+    line-height: 1;
+}
+
+.intro-title,
+.completion-title,
+.error-title {
+    margin: 12px 0 8px;
+    font-size: 1.5rem;
+}
+
+.intro-desc {
+    margin: 0 0 16px;
+    color: var(--muted);
+}
+
+.intro-stats {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin: 0 0 18px;
+}
+
+.stat {
+    background-color: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 10px 16px;
+    font-size: 0.95rem;
+}
+
+.stat strong {
+    color: var(--primary);
+}
+
+.intro-learning {
+    margin: 0 0 22px;
+    padding-left: 20px;
+    color: var(--text);
+}
+
+.intro-learning li {
+    margin: 6px 0;
+}
+
+.intro-actions,
+.quiz-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* ---------- Questionnaire ---------- */
+
+.quiz-wrap {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.quiz-meta {
+    font-size: 0.95rem;
+    color: var(--muted);
+    margin: 0 0 12px;
+}
+
+.progress-block {
+    margin: 0 0 22px;
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+
+.progress-track {
+    background-color: var(--border);
+    border-radius: 999px;
+    height: 12px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    background: linear-gradient(90deg, var(--primary-light), var(--primary));
+    height: 100%;
+    width: 0;
+    border-radius: 999px;
+    transition: width 0.3s ease;
+}
+
+.quiz-question {
+    margin: 0 0 18px;
+    font-size: 1.25rem;
+    line-height: 1.4;
+}
+
+.options-list {
+    list-style: none;
+    margin: 0 0 18px;
+    padding: 0;
+    display: grid;
+    gap: 12px;
+}
+
+.option-btn {
+    display: block;
+    width: 100%;
+    text-align: left;
+    background-color: var(--card);
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 16px;
+    font-size: 1rem;
+    font-family: inherit;
+    color: var(--text);
+    cursor: pointer;
+    min-height: 52px;
+    transition: border-color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.option-btn:hover:not(:disabled) {
+    border-color: var(--primary-light);
+    background-color: #f7fffe;
+}
+
+.option-btn:focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring);
+}
+
+.option-btn.is-selected {
+    border-color: var(--primary-light);
+    background-color: #eefaf8;
+}
+
+.option-btn.is-correct {
+    border-color: var(--success);
+    background-color: #f0fdf4;
+    color: var(--success);
+    font-weight: 600;
+}
+
+.option-btn.is-incorrect {
+    border-color: var(--danger);
+    background-color: #fef2f2;
+    color: var(--danger);
+}
+
+.option-btn:disabled {
+    cursor: not-allowed;
+    opacity: 1;
+}
+
+.feedback {
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin: 0 0 18px;
+    font-size: 1rem;
+    border: 1px solid var(--border);
+    background-color: var(--background);
+}
+
+.feedback:empty {
+    display: none;
+}
+
+.feedback.is-correct {
+    border-color: #bbf7d0;
+    background-color: #f0fdf4;
+    color: #14532d;
+}
+
+.feedback.is-incorrect {
+    border-color: #fecaca;
+    background-color: #fef2f2;
+    color: #7f1d1d;
+}
+
+.explanation {
+    margin: 0 0 18px;
+    font-size: 0.95rem;
+    color: var(--muted);
+}
+
+.explanation strong {
+    color: var(--text);
+}
+
+/* ---------- Completion ---------- */
+
+.completion-card {
+    text-align: center;
+}
+
+.completion-message {
+    color: var(--muted);
+}
+
+.completion-stat {
+    font-size: 1rem;
+    color: var(--text);
+    margin: 4px 0 18px;
+}
+
+.reminders {
+    text-align: left;
+    margin: 18px auto 24px;
+    max-width: 420px;
+    padding-left: 20px;
+    color: var(--text);
+}
+
+.reminders li {
+    margin: 8px 0;
+}
+
+.completion-actions {
+    display: flex;
+    justify-content: center;
+}
+
+/* ---------- Error ---------- */
+
+.error-card {
+    text-align: center;
+}
+
+.error-message {
+    color: var(--muted);
+    margin: 0 0 20px;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+    border-top: 1px solid var(--border);
+    background-color: var(--card);
+    padding: 8px 20px;
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 4px 0;
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+.site-footer .footer-note {
+    font-size: 0.8rem;
+}
+
+/* ---------- Accessibility ---------- */
+
+:focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring);
+}
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    background: var(--primary);
+    color: #ffffff;
+    padding: 10px 16px;
+    border-radius: 0 0 10px 0;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    left: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .progress-fill,
+    .btn {
+        transition: none;
+    }
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 768px) {
+    .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .home-title {
+        font-size: 1.6rem;
+    }
+
+    .home-hero-icon {
+        font-size: 2.8rem;
+    }
+
+    .quiz-question {
+        font-size: 1.15rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .app {
+        padding: 18px 14px 36px;
+    }
+
+    .intro-card,
+    .completion-card,
+    .error-card {
+        padding: 20px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .intro-actions,
+    .quiz-actions {
+        flex-direction: column;
+    }
+
+    .home-title {
+        font-size: 1.4rem;
+    }
+}

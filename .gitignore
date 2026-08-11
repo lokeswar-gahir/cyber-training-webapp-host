@@ -1,0 +1,23 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Azure Static Web Apps local tooling
+.swa/
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editors / IDE
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+*.config.json
+
+donot/
